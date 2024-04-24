@@ -1,0 +1,36 @@
+.services-container {
+    
+    color: #fff; /* Белый текст */
+    text-align: center;
+    padding: 80px 0; /* Отступы сверху и снизу */
+  }
+  
+  .centered-text {
+    margin-bottom: 40px; /* Отступ после текста */
+  }
+  
+  .services-section {
+    margin-top: 40px; /* Отступ перед разделами услуг */
+  }
+  
+  .services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    width: 45%; /* Ширина блока услуги */
+    padding: 10px;
+    background-color: #4e54c8; /* Фон блока услуги */
+    margin-bottom: 20px; /* Отступ между блоками услуг */
+    border-radius: 5px; /* Закругление углов */
+  }
+  .service-list {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+  }
+  
+  .service-list li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+  }
