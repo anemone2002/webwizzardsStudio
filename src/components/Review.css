@@ -1,0 +1,33 @@
+.container {
+  padding: 20px;
+}
+
+.cards-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  gap:20px;
+}
+
+.card {
+  margin: 10px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: black;
+}

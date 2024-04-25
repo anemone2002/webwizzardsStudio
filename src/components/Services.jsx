@@ -20,7 +20,7 @@ const Services = () => {
       </div>
       <div className="services">
         <div className="service">
-           <h3 onClick={toggleList}>SEO сайты</h3> 
+           <h4 onClick={toggleList}>SEO сайты</h4> 
         {isOpen && ( 
           <ul className="service-list">
             <li>Первая страница поисковой системы</li>
@@ -30,7 +30,7 @@ const Services = () => {
           </ul>
         )}
         </div>
-        <div className="service"><h3 onClick={toggleList}>Дизайн</h3> 
+        <div className="service"><h4 onClick={toggleList}>Дизайн</h4> 
         {isOpen && ( 
           <ul className="service-list">
             <li>Первая страница поисковой системы</li>
