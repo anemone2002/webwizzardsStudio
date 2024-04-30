@@ -15,12 +15,17 @@ const Review = () => {
 
 
     const slideForward =() =>{
-        if (tx > 50){
+        if (tx > -50){
             tx -=25;
         }
-        slider.current.style.transform = `translateX(${tx}%)`
+        slider.current.style.transform = `translateX(${tx}%)`;
     }
-    const slideBackward =() =>{}
+    const slideBackward =() =>{
+        if (tx < 0){
+            tx +=25;
+        }
+        slider.current.style.transform = `translateX(${tx}%)`;
+    }
 
 
   return (

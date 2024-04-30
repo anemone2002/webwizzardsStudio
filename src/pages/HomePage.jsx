@@ -1,11 +1,11 @@
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hello from "../components/Hello";
 import Services from "../components/Services";
 import Title from "../components/Title";
 import Portfolio from "../components/Portfolio"
 import Review from "../components/Review";
-// import ContactUs from'../components/ContactUs';
+import ContactUs from'../components/ContactUs';
 
 
 import "../App.css";
@@ -24,11 +24,16 @@ function HomePage() {
             <Portfolio/>
             <Title subTitle='Testimonials ' title='What Client Says'/>
             <Review/>
+            <Title subTitle='Contact us ' title='Get in Touch'/>
+            <ContactUs/>
+            <Footer/>
+            
+
             
             </div>
-            {/* <ContactUs/> */}
             
-            {/* 
+            
+            
            
             
             
@@ -37,8 +42,8 @@ function HomePage() {
 
 
 
-            <Footer/> */}
-        
+            
+         
 
         
         

@@ -25,3 +25,20 @@
     line-height: 1.4;
 
 }
+@media (max-width:550px){
+    .hello-text h1{
+        font-size: 40px;
+    }
+}
+@media (max-width:650px){
+    .hello-text h1{
+        font-size: 30px;
+        min-width: 400px;
+        margin: auto;
+    }
+    .hello-text p{
+        font-size: 14px;
+        margin: 15px auto 30px;
+          
+    }
+}

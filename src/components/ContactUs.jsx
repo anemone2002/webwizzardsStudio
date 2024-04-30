@@ -1,40 +1,56 @@
 import React from 'react';
 import './ContactUs.css'; 
-
+import rightarr from '../assets/images/right-arrow.png'
 
 const Contact = () => {
+    const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "19c96cf3-017b-440b-8ca1-c67f9e7c454b");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
     return (  
-        <section className="contact" id="contacts">
-            <div className="container">
-                <div className="left-section">
+        <div className="contact">            
+                <div className="contact-col">
                     <div className="rectangle">
                         <span className='up'>start a relationship</span>
-                        <span>New Business</span>
-                        
-                        
+                        <span>New Business</span>                                                
                     </div>
                 </div>
-                <div className="right-section">
-                    <h2>Contact Us</h2>
-                    <p>We’d love to learn more about your company and how we can help you. Tell us about your project in the form below, and we’ll put you in touch with the right team.</p>
-                    <form>
-                        <div className="form-group">
-                            <label htmlFor="name">Name:</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email:</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit">Submit</button>
+                <div className="contact-col">
+                    <form onSubmit={onSubmit }>
+                        <label>Your name </label>
+                        <input type="text" name='name' placeholder='Enter your name' />
+                        <label>Phone Number</label>
+                        <input type="text" name='phone' placeholder='Enter your mobile phone number' />
+                        <label>Write your message here</label>
+                        <textarea name='message'  rows='6' placeholder='Enter your message'></textarea>
+                        <button type='submit' className='btn dark-btn'>Submit now <img src={rightarr} alt="" /></button>
+                       
+
                     </form>
+                    <span>{result}</span>
                 </div>
-            </div>
-        </section>
+            
+        </div>
     );
 }
 

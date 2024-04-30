@@ -6,7 +6,7 @@ import pro3 from '../assets/images/ui.jpg';
 import proic1 from '../assets/images/coding.png'; 
 import proic2 from '../assets/images/market.png'; 
 import proic3 from '../assets/images/web-design.png'; 
-
+import {Link} from 'react-router-dom'
 
 const Services = () => {
   return (
@@ -22,7 +22,7 @@ const Services = () => {
         <img src={pro2} alt="" />
         <div className="caption">
           <img src={proic2} alt="" />
-          <p>Marketing</p>
+          <p><Link to='/marketing'>Marketing</Link></p>
         </div>
       </div>
       <div className='service'>
